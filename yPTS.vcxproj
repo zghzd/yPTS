@@ -134,11 +134,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="b_ypts.cpp" />
+    <ClCompile Include="extract_zipF.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="takemeback.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="b_ypts.h" />
+    <ClInclude Include="extract_zipF.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="takemeback.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="license.md">
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -2,10 +2,6 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <fstream>
-#include <filesystem>
-#define NOMINMAX
-#include <windows.h>
 
 namespace ypts {
 	namespace paths {

@@ -21,6 +21,12 @@
     <ClCompile Include="b_ypts.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="extract_zipF.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="takemeback.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -29,5 +35,19 @@
     <ClInclude Include="b_ypts.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="extract_zipF.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="takemeback.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="license.md">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>
