@@ -108,6 +108,8 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -126,6 +128,8 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -134,13 +138,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="b_ypts.cpp" />
-    <ClCompile Include="extract_zipF.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="takemeback.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="b_ypts.h" />
-    <ClInclude Include="extract_zipF.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="takemeback.h" />
   </ItemGroup>
