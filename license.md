@@ -1,7 +1,7 @@
 ﻿# 版权声明  
 ## 除特别说明外，适用于当前项目的整个存储库  
 ---
-Copyright 2025 翊(dzfg688523@dingtalk.com)
+Copyright 2025-2026 翊(dzfg688523@dingtalk.com)
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

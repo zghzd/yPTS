@@ -21,10 +21,16 @@
     <ClCompile Include="b_ypts.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="extract_zipF.cpp">
+    <ClCompile Include="takemeback.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="takemeback.cpp">
+    <ClCompile Include="ipath,chk.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="plug.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="run.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,10 +41,13 @@
     <ClInclude Include="b_ypts.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="extract_zipF.h">
+    <ClInclude Include="takemeback.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="takemeback.h">
+    <ClInclude Include="ipath,chk.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="plug.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -138,12 +138,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="b_ypts.cpp" />
+    <ClCompile Include="ipath,chk.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="plug.cpp" />
+    <ClCompile Include="run.cpp" />
     <ClCompile Include="takemeback.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="b_ypts.h" />
+    <ClInclude Include="ipath,chk.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="plug.h" />
     <ClInclude Include="takemeback.h" />
   </ItemGroup>
   <ItemGroup>
