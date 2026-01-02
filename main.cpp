@@ -5,7 +5,7 @@
 #include <map>
 
 int main(int argc, char* argv[]) {
-	std::cout << "usage:ypts (plug|run|add-path|rm-path|list-path) ([plug_name]|[func_name]|[any_path]|[any_path])\n" << std::endl;
+	std::cout << "usage:ypts (plug|run|add-path|rm-path|list-path) [arguments]\n    plug able <plug_name>\n    plug unable <plug_name>\n    plug unable_all\n    run <name>\n    (add-path|rm-path) <any_path>\n    list-path" << std::endl;
 	ypts::backtofilepath::SetCurrentDirToExecutableDir();
 	std::filesystem::create_directory(ypts::paths::bin());
 	std::filesystem::create_directory(ypts::paths::data());

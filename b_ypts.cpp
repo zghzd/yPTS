@@ -195,24 +195,28 @@ namespace ypts {
 			std::string log = "[" + ypts::time::utc_p0800() + "]" + "E" + ":" + msg + "\n";
 			std::filesystem::path log_file_path = std::filesystem::current_path() / logpath / std::filesystem::path(ypts::time::date() + ".log");
 			ypts::fio::file_write_c(log_file_path.string(), log);
+			std::cout << log << std::endl;
 			return log;
 		}
 		std::string W(std::string msg, std::string logpath) {
 			std::string log = "[" + ypts::time::utc_p0800() + "]" + "W" + ":" + msg + "\n";
 			std::filesystem::path log_file_path = std::filesystem::current_path() / logpath / std::filesystem::path(ypts::time::date() + ".log");
 			ypts::fio::file_write_c(log_file_path.string(), log);
+			std::cout << log << std::endl;
 			return log;
 		}
 		std::string D(std::string msg, std::string logpath) {
 			std::string log = "[" + ypts::time::utc_p0800() + "]" + "D" + ":" + msg + "\n";
 			std::filesystem::path log_file_path = std::filesystem::current_path() / logpath / std::filesystem::path(ypts::time::date() + ".log");
 			ypts::fio::file_write_c(log_file_path.string(), log);
+			std::cout << log << std::endl;
 			return log;
 		}
 		std::string I(std::string msg, std::string logpath) {
 			std::string log = "[" + ypts::time::utc_p0800() + "]" + "I" + ":" + msg + "\n";
 			std::filesystem::path log_file_path = std::filesystem::current_path() / logpath / std::filesystem::path(ypts::time::date() + ".log");
 			ypts::fio::file_write_c(log_file_path.string(), log);
+			std::cout << log << std::endl;
 			return log;
 		}
 	}
