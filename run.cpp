@@ -1,3 +1,5 @@
+#include <map>
+#include <filesystem>
 #include "pch.h"
 namespace ypts {
 	int run_main(std::vector<std::string> argu);//已去除ypts和run
@@ -16,6 +18,41 @@ namespace ypts {
 				break;
 			}
 		}
+		//索引 内部地址:真实地址
+		std::map<std::string, std::string> index;//内部地址 -> 真实地址
+		auto inpath_list_f = ypts::fio::file_read_lines(ypts::paths::data() + "inpaths.ypts");
+		for (auto i : inpath_list_f) {
+			auto a_f = ypts::data_process::getAllFiles(i);
+            for (auto file : a_f) {
+                std::filesystem::path filePath(file);
+                std::filesystem::path inPath(i);
+                std::string internal_path;
+                try {
+                    std::filesystem::path relative = std::filesystem::relative(filePath, inPath);
+                    internal_path = "/" + relative.string();
+                    for (size_t j = 0; j < internal_path.length(); ++j) {
+                        if (internal_path[j] == '\\') {
+                            internal_path[j] = '/';
+                        }
+                    }
+                }
+                catch (const std::exception& e) {
+                    ypts::logger::W("无法计算相对路径: " + file + " 相对于 " + i);
+                    ypts::logger::W(e.what());
+                    return -1;
+                }
+                if (index.find(internal_path) != index.end()) {
+                    std::string warning_msg = "无法区分文件<实际地址1:" + index[internal_path] + "><实际地址2:" + file + ">，最后的值为:<" + file + ">(已替换)";
+                    ypts::logger::W(warning_msg);
+                }
+                index[internal_path] = file;
+            }
+        }
+        for (const auto& entry : index) {
+            std::string temp_index_file = entry.first + ":" + entry.second + "\n";
+            std::string temp_index_path = ypts::paths::data() + "inpath_index.txt";
+            ypts::fio::file_write_c(temp_index_path, temp_index_file);
+        }
 		//下方启动内置func
 		
 		//==========
