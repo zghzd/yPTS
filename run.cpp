@@ -18,8 +18,9 @@ namespace ypts {
 				break;
 			}
 		}
-		//索引 内部地址:真实地址
-		std::map<std::string, std::string> index;//内部地址 -> 真实地址
+        //索引 内部地址>真实地址
+		std::map<std::string, std::string> ypts_run_index;//内部地址 -> 真实地址
+        ypts::logger::I("为输入目录建立索引...");
 		auto inpath_list_f = ypts::fio::file_read_lines(ypts::paths::data() + "inpaths.ypts");
 		for (auto i : inpath_list_f) {
 			auto a_f = ypts::data_process::getAllFiles(i);
@@ -41,18 +42,28 @@ namespace ypts {
                     ypts::logger::W(e.what());
                     return -1;
                 }
-                if (index.find(internal_path) != index.end()) {
-                    std::string warning_msg = "无法区分文件<实际地址1:" + index[internal_path] + "><实际地址2:" + file + ">，最后的值为:<" + file + ">(已替换)";
+                if (ypts_run_index.find(internal_path) != ypts_run_index.end()) {
+                    std::string warning_msg = "无法区分文件<实际地址1:" + ypts_run_index[internal_path] + "><实际地址2:" + file + ">，最后的值为:<" + file + ">(已替换)";
                     ypts::logger::W(warning_msg);
                 }
-                index[internal_path] = file;
+                ypts_run_index[internal_path] = file;
             }
         }
-        for (const auto& entry : index) {
-            std::string temp_index_file = entry.first + ":" + entry.second + "\n";
-            std::string temp_index_path = ypts::paths::data() + "inpath_index.txt";
-            ypts::fio::file_write_c(temp_index_path, temp_index_file);
+        ypts::logger::I("索引建立完成");
+        ypts::logger::D("缓存索引:" + ypts::paths::temp() + "inpath_index.txt");
+        for (const auto& entry : ypts_run_index) {
+            std::string temp_ypts_run_index_file = entry.first + ">" + entry.second + "\n";
+            std::string temp_ypts_run_index_path = ypts::paths::temp() + "inpath_index.txt";
+            ypts::fio::file_write_c(temp_ypts_run_index_path, temp_ypts_run_index_file);
         }
+        ypts::logger::D("缓存索引(debug)完成");
+        ypts::logger::I("缓存内部值:" + ypts::paths::rep() + "index.txt");
+        for (const auto& entry : ypts_run_index) {
+            std::string temp_ypts_run_index_file = entry.first + "\n";
+            std::string temp_ypts_run_index_path = ypts::paths::rep() + "index.txt";
+            ypts::fio::file_write_c(temp_ypts_run_index_path, temp_ypts_run_index_file);
+        }
+        ypts::logger::I("缓存内部值完成");
 		//下方启动内置func
 		
 		//==========
