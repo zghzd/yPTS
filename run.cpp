@@ -1,6 +1,9 @@
 #include <map>
 #include <filesystem>
 #include "pch.h"
+//此处声明内部func函数
+extern int run_a_index(std::map<std::string, std::string>index);
+//================
 namespace ypts {
 	int run_main(std::vector<std::string> argu);//已去除ypts和run
 }
@@ -50,22 +53,20 @@ namespace ypts {
             }
         }
         ypts::logger::I("索引建立完成");
-        ypts::logger::D("缓存索引:" + ypts::paths::temp() + "inpath_index.txt");
-        for (const auto& entry : ypts_run_index) {
-            std::string temp_ypts_run_index_file = entry.first + ">" + entry.second + "\n";
-            std::string temp_ypts_run_index_path = ypts::paths::temp() + "inpath_index.txt";
-            ypts::fio::file_write_c(temp_ypts_run_index_path, temp_ypts_run_index_file);
-        }
-        ypts::logger::D("缓存索引(debug)完成");
-        ypts::logger::I("缓存内部值:" + ypts::paths::rep() + "index.txt");
+        ypts::logger::I("存档内部值:" + ypts::paths::rep() + "index.txt");
         for (const auto& entry : ypts_run_index) {
             std::string temp_ypts_run_index_file = entry.first + "\n";
             std::string temp_ypts_run_index_path = ypts::paths::rep() + "index.txt";
             ypts::fio::file_write_c(temp_ypts_run_index_path, temp_ypts_run_index_file);
         }
-        ypts::logger::I("缓存内部值完成");
-		//下方启动内置func
-		
+        ypts::logger::I("存档内部值完成");
+
+		//下方启动内置func，注意：功能的实现文件*.cpp(比如run_a_index.cpp)，必须为使用预编译头文件，而不是创建。同时，函数必须extern。
+        //func函数声明在本文件头部
+        if (argu[0] == "a_index") {
+            run_a_index(ypts_run_index);
+        }
+
 		//==========
 		return 0;
 	}

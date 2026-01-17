@@ -1,6 +1,11 @@
 #include "b_ypts.h"
 #include <fstream>
 #include <filesystem>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <iostream>
+#include <ranges>
 #define NOMINMAX
 #include <windows.h>
 #include "pch.h"
@@ -165,6 +170,11 @@ namespace ypts {
 				result.push_back("");
 			}
 			return result;
+		}
+		void addIfNotExists_invector(std::vector<std::string>& vec, const std::string& str) {
+			if (std::ranges::find(vec, str) == vec.end()) {
+				vec.emplace_back(str);
+			}
 		}
 	}
 	namespace time {

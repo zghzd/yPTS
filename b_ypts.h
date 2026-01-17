@@ -24,6 +24,7 @@ namespace ypts {
 		bool is_dir_has_file(std::string root_path);
 		std::vector<std::string>part_str(std::string str, std::string part_by);
 		std::vector<std::string>part_str_once(std::string str, std::string part_by);
+		void addIfNotExists_invector(std::vector<std::string>& vec, const std::string& str);
 	}
 	namespace time {
 		std::string utc_p0800();//utc+0800
