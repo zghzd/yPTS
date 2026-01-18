@@ -156,6 +156,10 @@
     <ClInclude Include="takemeback.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="FAQ.md">
+      <SubType>
+      </SubType>
+    </None>
     <None Include="license.md">
       <SubType>
       </SubType>
