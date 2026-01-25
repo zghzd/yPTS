@@ -1,8 +1,6 @@
-#include <map>
-#include <filesystem>
 #include "pch.h"
 
-int run_a_index(std::map<std::string, std::string>index) {
+int run_a_index(std::map<std::string, std::string> index) {
     ypts::logger::D("´æ´¢Ë÷Òý:" + ypts::paths::temp() + "inpath_index.txt");
     for (const auto& entry : index) {
         std::string temp_ypts_run_index_file = entry.first + ">" + entry.second + "\n";

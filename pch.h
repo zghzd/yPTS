@@ -1,4 +1,8 @@
 #pragma once
+#include <map>
+#include <filesystem>
+#include <string>
+
 #define NOMINMAX
 #include "b_ypts.h"
 #include "takemeback.h"
