@@ -58,9 +58,6 @@
     <None Include="README.md">
       <Filter>资源文件</Filter>
     </None>
-    <None Include="license.md">
-      <Filter>资源文件</Filter>
-    </None>
     <None Include="FAQ.md">
       <Filter>资源文件</Filter>
     </None>

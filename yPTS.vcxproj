@@ -160,10 +160,6 @@
       <SubType>
       </SubType>
     </None>
-    <None Include="license.md">
-      <SubType>
-      </SubType>
-    </None>
     <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
