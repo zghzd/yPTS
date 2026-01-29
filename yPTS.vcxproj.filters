@@ -55,11 +55,11 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="README.md">
-      <Filter>资源文件</Filter>
-    </None>
-    <None Include="FAQ.md">
-      <Filter>资源文件</Filter>
-    </None>
+    <None Include="README.md" />
+    <None Include="FAQ.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="NOTICE.txt" />
+    <Text Include="yPTS Project-Specific License Agreement.txt" />
   </ItemGroup>
 </Project>

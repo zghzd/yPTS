@@ -1,0 +1,40 @@
+由于使用多个许可证，此处为每个文件指明其所用的许可协议
+未指定的文件默认使用 yPTS Project-Specific License Agreement （许可证副本文件除外）
+所有许可协议在项目根目录可找到
+/是项目根目录，而不是磁盘、系统根目录
+可能使用通配符
+
+1. Apache License Version 2.0
+许可声明在下方：
+   Copyright 2026 翊(dzfg688523@dingtalk.com)
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+以下文件使用Apache2.0许可协议：
+/b_ypts.cpp
+/b_ypts.h
+/ipath,chk.cpp
+/ipath,chk.h
+/main.cpp
+/pch.h
+/plug.cpp
+/plug.h
+/run.cpp
+/run_a_index.cpp
+/takemeback.cpp
+/takemeback.h
+
+2. Attribution 4.0 International (CC-BY-4.0)
+
+以下文件使用CC-BY-4.0许可协议：
+
