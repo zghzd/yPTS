@@ -21,20 +21,21 @@
    limitations under the License.
 
 以下文件使用Apache2.0许可协议：
-/b_ypts.cpp
-/b_ypts.h
-/ipath,chk.cpp
-/ipath,chk.h
-/main.cpp
-/pch.h
-/plug.cpp
-/plug.h
-/run.cpp
-/run_a_index.cpp
-/takemeback.cpp
-/takemeback.h
+    /b_ypts.cpp
+    /b_ypts.h
+    /ipath,chk.cpp
+    /ipath,chk.h
+    /main.cpp
+    /pch.h
+    /plug.cpp
+    /plug.h
+    /run.cpp
+    /run_a_index.cpp
+    /takemeback.cpp
+    /takemeback.h
 
 2. Attribution 4.0 International (CC-BY-4.0)
 
 以下文件使用CC-BY-4.0许可协议：
 
+无
